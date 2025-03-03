@@ -2,6 +2,24 @@
 
 @plugin "tailwindcss-animate";
 
+@font-face {
+  font-family: "MonumentExtended";
+  src: url("/fonts/MonumentExtended-Regular.woff2") format("woff2"),
+    url("/fonts/MonumentExtended-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MonumentExtended";
+  src: url("/fonts/MonumentExtended-Ultrabold.woff2") format("woff2"),
+    url("/fonts/MonumentExtended-Ultrabold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: #fff;
   --foreground: #444;
@@ -17,6 +35,9 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary-foreground: var(--primary-foreground);
+
+  --font-sans: "Archivo Variable", sans-serif;
+  --font-monument: "MonumentExtended", sans-serif;
 }
 
 @layer base {
