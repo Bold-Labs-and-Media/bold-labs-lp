@@ -1,4 +1,5 @@
 ---
+import Footer from "@/components/Footer.astro";
 import "@/styles/global.css";
 import "@fontsource-variable/archivo";
 ---
@@ -12,7 +13,8 @@ import "@fontsource-variable/archivo";
     <meta name="generator" content={Astro.generator} />
     <title>Bold Labs</title>
   </head>
-  <body>
+  <body class="font-sans font-normal">
     <slot />
+    <Footer />
   </body>
 </html>

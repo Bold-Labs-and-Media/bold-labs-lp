@@ -25,6 +25,8 @@
   --foreground: #444;
   --primary: #57f09f;
   --primary-foreground: #fff;
+
+  --width-footer: 1240px;
 }
 
 @theme {
@@ -35,6 +37,8 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary-foreground: var(--primary-foreground);
+
+  --spacing-width-footer: var(--width-footer);
 
   --font-sans: "Archivo Variable", sans-serif;
   --font-monument: "MonumentExtended", sans-serif;
