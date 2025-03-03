@@ -1,0 +1,25 @@
+---
+import navbarLogoImage from "@/assets/images/bold-labs-logo.png";
+import { Image } from "astro:assets";
+import LanguageDropdownMenu from "./interactive/LanguageDropdownMenu";
+---
+
+<header
+  class="flex justify-between max-w-max-width-navbar mx-auto items-center"
+>
+  <Image src={navbarLogoImage} alt="Bold Labs Logo" width={127} height={61} />
+  <nav>
+    <ul class="flex items-center gap-14 text-white text-lg">
+      <li><a href="#">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#testimonials">Testemunhos</a></li>
+      <li><LanguageDropdownMenu client:load /></li>
+    </ul>
+  </nav>
+  <a
+    href="#contacts"
+    class="rounded-4xl py-5 px-8 bg-primary text-lg font-semibold text-white duration-300 hover:bg-primary/90"
+    >Contact Us
+  </a>
+</header>

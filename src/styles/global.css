@@ -27,6 +27,7 @@
   --primary-foreground: #fff;
 
   --width-footer: 1240px;
+  --max-width-navbar: 1331px;
 }
 
 @theme {
@@ -39,6 +40,7 @@
   --color-primary-foreground: var(--primary-foreground);
 
   --spacing-width-footer: var(--width-footer);
+  --spacing-max-width-navbar: var(--max-width-navbar);
 
   --font-sans: "Archivo Variable", sans-serif;
   --font-monument: "MonumentExtended", sans-serif;
