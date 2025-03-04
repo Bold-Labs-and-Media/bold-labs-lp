@@ -28,6 +28,8 @@
 
   --width-footer: 1240px;
   --max-width-navbar: 1331px;
+
+  --font-size-big-hero: 5rem;
 }
 
 @theme {
@@ -42,6 +44,8 @@
   --spacing-width-footer: var(--width-footer);
   --spacing-max-width-navbar: var(--max-width-navbar);
 
+  --text-big-hero: var(--font-size-big-hero);
+
   --font-sans: "Archivo Variable", sans-serif;
   --font-monument: "MonumentExtended", sans-serif;
 }
@@ -54,4 +58,19 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+.background-grid-pattern {
+  --line-color: #303030;
+  --stroke-width: 1px;
+  background-image: linear-gradient(
+      var(--line-color) var(--stroke-width),
+      transparent var(--stroke-width)
+    ),
+    linear-gradient(
+      90deg,
+      var(--line-color) var(--stroke-width),
+      transparent var(--stroke-width)
+    );
+  background-size: 100px 156px;
 }
