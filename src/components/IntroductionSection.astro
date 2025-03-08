@@ -1,0 +1,38 @@
+---
+import { getLangFromUrl, useTranslations } from "@/lib/utils";
+import { Image } from "astro:assets";
+import StarSVG from "./svg/StarSVG.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="wrapper mb-20">
+  <h2 class="font-monument text-center text-txt-100 mb-4">
+    {t("introduction.title")}
+  </h2>
+  <p class="text-center text-xxs mb-10">
+    {t("introduction.subtitle")}
+  </p>
+  <div class="flex gap-5 flex-col">
+    <div class="relative">
+      <div class="absolute -top-6 -left-5">
+        <StarSVG />
+      </div>
+      <Image
+        class="rounded-2.5xl w-full"
+        src="https://placehold.co/328x219"
+        width={328}
+        height={219}
+        alt=""
+      />
+    </div>
+    <Image
+      class="rounded-2.5xl w-full"
+      src="https://placehold.co/328x492"
+      width={328}
+      height={492}
+      alt=""
+    />
+  </div>
+</section>

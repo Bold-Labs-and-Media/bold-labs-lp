@@ -28,8 +28,8 @@
 
   --width-footer: 1240px;
   --max-width-navbar: 1331px;
-
   --font-size-big-hero: 5rem;
+  --wrapper-max-width: 1240px;
 }
 
 @theme {
@@ -45,6 +45,10 @@
   --spacing-max-width-navbar: var(--max-width-navbar);
 
   --text-big-hero: var(--font-size-big-hero);
+
+  --text-xxs: 0.625rem;
+
+  --radius-2.5xl: 1.31rem;
 
   --font-sans: "Archivo Variable", sans-serif;
   --font-monument: "MonumentExtended", sans-serif;
@@ -73,4 +77,10 @@ html {
       transparent var(--stroke-width)
     );
   background-size: 100px 156px;
+}
+
+.wrapper {
+  max-inline-size: var(--wrapper-max-width);
+  margin-inline: auto;
+  padding-inline: 30px;
 }
