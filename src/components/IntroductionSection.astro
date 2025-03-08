@@ -7,31 +7,37 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section class="wrapper mb-20">
-  <h2 class="font-monument text-center text-txt-100 mb-4">
-    {t("introduction.title")}
-  </h2>
-  <p class="text-center text-xxs mb-10">
-    {t("introduction.subtitle")}
-  </p>
-  <div class="flex gap-5 flex-col">
-    <div class="relative">
+<section class="wrapper mb-20 mt-5 md:mt-24">
+  <div
+    class="flex flex-col gap-4 md:flex-row md:gap-6 items-start mb-10 md:mb-0"
+  >
+    <h2
+      class="font-monument text-center md:text-left md:text-4.5xl text-txt-100 mb-4"
+    >
+      {t("introduction.title")}
+    </h2>
+    <p class="text-center md:text-left md:text-xl text-xxs">
+      {t("introduction.subtitle")}
+    </p>
+  </div>
+  <div class="flex gap-5 flex-col md:grid grid-cols-3 md:gap-10">
+    <div class="relative col-span-2 md:mt-10">
       <div class="absolute -top-6 -left-5">
         <StarSVG />
       </div>
       <Image
-        class="rounded-2.5xl w-full"
-        src="https://placehold.co/328x219"
-        width={328}
-        height={219}
+        class="rounded-2.5xl"
+        src="https://placehold.co/757x504"
+        width={757}
+        height={504}
         alt=""
       />
     </div>
     <Image
       class="rounded-2.5xl w-full"
-      src="https://placehold.co/328x492"
-      width={328}
-      height={492}
+      src="https://placehold.co/443x663"
+      width={443}
+      height={663}
       alt=""
     />
   </div>
