@@ -1,7 +1,12 @@
 ---
 import navbarLogoImage from "@/assets/images/bold-labs-logo.png";
+import { languages } from "@/i18n/ui";
+import { getLangFromUrl, useTranslations } from "@/lib/utils";
 import { Image } from "astro:assets";
 import LanguageDropdownMenu from "./interactive/LanguageDropdownMenu";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <header
@@ -10,16 +15,25 @@ import LanguageDropdownMenu from "./interactive/LanguageDropdownMenu";
   <Image src={navbarLogoImage} alt="Bold Labs Logo" width={127} height={61} />
   <nav>
     <ul class="flex items-center gap-14 text-white text-lg">
-      <li><a href="#">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#testimonials">Testemunhos</a></li>
-      <li><LanguageDropdownMenu client:load /></li>
+      <li><a href="#">{t("nav.home")}</a></li>
+      <li><a href="#services">{t("nav.services")}</a></li>
+      <li><a href="#portfolio">{t("nav.portfolio")}</a></li>
+      <li><a href="#testimonials">{t("nav.testimonials")}</a></li>
+      <li>
+        <LanguageDropdownMenu
+          languages={Object.entries(languages).map(([code, label]) => ({
+            code,
+            label,
+          }))}
+          label={t("nav.language")}
+          client:load
+        />
+      </li>
     </ul>
   </nav>
   <a
     href="#contacts"
     class="rounded-4xl py-5 px-8 bg-primary text-lg font-semibold text-white duration-300 hover:bg-primary/90"
-    >Contact Us
+    >{t("nav.contact")}
   </a>
 </header>
