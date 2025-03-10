@@ -42,6 +42,15 @@ export const ui: UI = {
     "services.link-card-primary-description":
       "Precisa de uma equipe criativa para dar vida à sua marca? A Bold Labs faz acontecer!",
     "services.link-card-primary-link": "Conheça",
+    // FAQ Section
+    "faq.title": "Perguntas",
+    "faq.marked-title": "Frequentes",
+    "faq.side-title": "FAQ",
+    "faq.subtitle":
+      "Da estratégia à execução, criamos soluções inovadoras que elevam marcas africanas, conectando criatividade, tecnologia e impacto real.",
+    "faq.question-1": "O que é a Bold Labs?",
+    "faq.answer-1":
+      "A Bold Labs é uma agência criativa especializada em branding, design, marketing digital e produção de conteúdo. Criamos experiências inovadoras para marcas que pretendem distinguir-se no mercado.",
     // Contact section
     "contact.title-text-1": "Inovar",
     "contact.title-text-2": "Inspirar",
@@ -87,6 +96,14 @@ export const ui: UI = {
     "services.link-card-primary-description":
       "Do you need a creative team to give life to your brand? Bold Labs makes it happen!",
     "services.link-card-primary-link": "Learn",
+    // FAQ Section
+    "faq.title": "Frequent",
+    "faq.marked-title": "Questions",
+    "faq.subtitle":
+      "From strategy to execution, we create innovative solutions that elevate African brands, connecting creativity, technology, and real impact.",
+    "faq.question": "What is Bold Labs?",
+    "faq.answer":
+      "Bold Labs is a creative innovation laboratory, agency, and consulting firm specializing in empowering African brands to stand out globally through creativity and innovation.",
     // Contact section
     "contact.title-text-1": "Innovate",
     "contact.title-text-2": "Inspire",
