@@ -4,7 +4,8 @@
 
 @font-face {
   font-family: "MonumentExtended";
-  src: url("/fonts/MonumentExtended-Regular.woff2") format("woff2"),
+  src:
+    url("/fonts/MonumentExtended-Regular.woff2") format("woff2"),
     url("/fonts/MonumentExtended-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
@@ -13,7 +14,8 @@
 
 @font-face {
   font-family: "MonumentExtended";
-  src: url("/fonts/MonumentExtended-Ultrabold.woff2") format("woff2"),
+  src:
+    url("/fonts/MonumentExtended-Ultrabold.woff2") format("woff2"),
     url("/fonts/MonumentExtended-Ultrabold.woff") format("woff");
   font-weight: 800;
   font-style: normal;
@@ -37,12 +39,16 @@
   --color-txt-100: #222;
   --color-txt-200: #666;
   --color-txt-300: #d9d9d9;
+  --color-txt-400: #ddd;
+  --color-txt-500: #2b2b2b;
+  --color-txt-600: #333;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary-foreground: var(--primary-foreground);
 
   --spacing-width-footer: var(--width-footer);
   --spacing-max-width-navbar: var(--max-width-navbar);
+  --spacing-8.5: 34px;
 
   --text-big-hero: var(--font-size-big-hero);
 
@@ -50,6 +56,7 @@
   --text-4.5xl: 2.5rem;
 
   --radius-2.5xl: 1.31rem;
+  --radius-5xl: 7.5rem;
 
   --font-sans: "Archivo Variable", sans-serif;
   --font-monument: "MonumentExtended", sans-serif;
@@ -68,7 +75,8 @@ html {
 .background-grid-pattern {
   --line-color: #303030;
   --stroke-width: 1px;
-  background-image: linear-gradient(
+  background-image:
+    linear-gradient(
       var(--line-color) var(--stroke-width),
       transparent var(--stroke-width)
     ),

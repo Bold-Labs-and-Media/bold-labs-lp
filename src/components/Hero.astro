@@ -1,20 +1,26 @@
+---
+import { getLangFromUrl, useTranslations } from "@/lib/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <div class="pt-[132px] pb-[103px]">
   <div
     class="capitalize text-center font-monument text-3xl md:text-big-hero text-white"
   >
     <div
-      class="-skew-x-[10deg] inline-block bg-primary rounded-2xl py-1 px-4 leading-tight mb-4"
+      class="-skew-x-[10deg] inline-block bg-primary rounded-sm py-1 px-4 leading-tight mb-4"
     >
-      <span>A Ponte</span>
+      <span>{t("hero.marked-title")}</span>
     </div>
-    Entre
+    {t("hero.title")}
     <br />
-    <p class="text-base md:text-5xl">E o Futuro do Mercado</p>
+    <p class="text-base md:text-5xl">{t("hero.small-title")}</p>
   </div>
   <p
     class="text-center text-xs md:text-2xl text-[#ddd] mt-8 max-w-4xl mx-auto leading-[170%] md:leading-10"
   >
-    A Bold Labs é um laboratório de inovação criativa, agência e consultoria
-    especializada em capacitar marcas africanas a destacarem-se.
+    {t("hero.subtitle")}
   </p>
 </div>
