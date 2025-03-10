@@ -4,16 +4,17 @@ import { languages } from "@/i18n/ui";
 import { getLangFromUrl, useTranslations } from "@/lib/utils";
 import { Image } from "astro:assets";
 import LanguageDropdownMenu from "./interactive/LanguageDropdownMenu";
+import MobileNavMenu from "./interactive/MobileNavMenu";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
 <header
-  class="flex justify-between max-w-max-width-navbar mx-auto items-center"
+  class="flex justify-between max-w-max-width-navbar mx-auto items-center wrapper"
 >
   <Image src={navbarLogoImage} alt="Bold Labs Logo" width={127} height={61} />
-  <nav>
+  <nav class="hidden lg:block">
     <ul class="flex items-center gap-14 text-white text-lg">
       <li><a href="#">{t("nav.home")}</a></li>
       <li><a href="#services">{t("nav.services")}</a></li>
@@ -33,7 +34,33 @@ const t = useTranslations(lang);
   </nav>
   <a
     href="#contacts"
-    class="rounded-4xl py-5 px-8 bg-primary text-lg font-semibold text-white duration-300 hover:bg-primary/90"
+    class="rounded-4xl py-5 px-8 bg-primary text-lg font-semibold text-white duration-300 hover:bg-primary/90 hidden lg:block"
     >{t("nav.contact")}
   </a>
+  <MobileNavMenu client:visible>
+    <ul class="flex flex-col gap-8 text-xl text-white">
+      <li>
+        <a href="#">{t("nav.home")}</a>
+      </li>
+      <li>
+        <a href="#services">{t("nav.services")}</a>
+      </li>
+      <li>
+        <a href="#portfolio">{t("nav.portfolio")}</a>
+      </li>
+      <li>
+        <a href="#testimonials">{t("nav.testimonials")}</a>
+      </li>
+      <li class="justify-center flex">
+        <LanguageDropdownMenu
+          languages={Object.entries(languages).map(([code, label]) => ({
+            code,
+            label,
+          }))}
+          label={t("nav.language")}
+          client:load
+        />
+      </li>
+    </ul>
+  </MobileNavMenu>
 </header>
