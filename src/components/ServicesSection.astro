@@ -1,6 +1,7 @@
 ---
 import { getLangFromUrl, useTranslations } from "@/lib/utils";
 import { Image } from "astro:assets";
+import { ArrowDown, ArrowRight } from "lucide-react";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const services = [t("services.1"), t("services.2"), t("services.3")];
@@ -33,8 +34,8 @@ const services = [t("services.1"), t("services.2"), t("services.3")];
           services.map((service, index) => (
             <li class="flex gap-3  rounded-5xl items-center px-10 py-8 border border-txt-400 text-sm font-medium text-foreground md:text-xl">
               <span class="font-monument text-lg">0{index + 1}</span>
-              <p>{service}</p>
-              {/* Add right arrow only on desktop */}
+              <p class="flex-1">{service}</p>
+              <ArrowRight size={24} />
             </li>
           ))
         }
@@ -58,7 +59,7 @@ const services = [t("services.1"), t("services.2"), t("services.3")];
         <div
           class="size-16 flex items-center justify-center text-lg rounded-full bg-txt-600"
         >
-          &darr;
+          <ArrowDown size={24} />
         </div>
       </div>
     </div>
@@ -74,7 +75,7 @@ const services = [t("services.1"), t("services.2"), t("services.3")];
           <div
             class="size-16 flex items-center justify-center text-lg rounded-full bg-white"
           >
-            &darr;
+            <ArrowDown size={24} />
           </div>
         </div>
       </div>

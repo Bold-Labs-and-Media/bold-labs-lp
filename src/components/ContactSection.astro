@@ -1,0 +1,50 @@
+---
+import { getLangFromUrl, useTranslations } from "@/lib/utils";
+import { Image } from "astro:assets";
+import BlackStarSVG from "./svg/BlackStar.astro";
+import StarSVG2 from "./svg/StarSVG2.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="wrapper mt-14">
+  <div
+    class="flex gap-2 items-center font-monument font-extrabold text-xl text-black md:text-4xl lg:text-7xl w-full max-w-fit mx-auto"
+  >
+    <p class="flex-1">{t("contact.title-text-1")}</p>
+    <StarSVG2 />
+    <p class="flex-1">{t("contact.title-text-2")}</p>
+    <StarSVG2 />
+    <p class="flex-1">{t("contact.title-text-3")}</p>
+  </div>
+  <div class="flex items-center gap-6 mt-8">
+    <div class="flex-1 h-0.5 bg-txt-100"></div>
+    <BlackStarSVG />
+    <div class="flex-1 h-0.5 bg-txt-100"></div>
+  </div>
+  <Image
+    class="rounded-2.5xl hidden md:block object-cover object-center mt-7"
+    src="https://placehold.co/1352x280"
+    width={1352}
+    height={280}
+    alt=""
+  />
+  <Image
+    class="rounded-2.5xl md:hidden object-cover object-center mt-7 w-full max-w-xs mx-auto"
+    src="https://placehold.co/334x280"
+    width={334}
+    height={280}
+    alt=""
+  />
+  <p
+    class="mt-9 max-w-xs mx-auto text-center text-xxs md:text-base lg:text-xl md:max-w-5xl"
+  >
+    {t("contact.subtitle")}
+  </p>
+  <a
+    href="/"
+    class="mt-6 block w-full py-6 max-w-3xs mx-auto text-center text-sm font-semibold text-white bg-txt-100 rounded-4xl md:text-base lg:text-lg"
+    target="_blank">{t("contact.button")}</a
+  >
+</section>

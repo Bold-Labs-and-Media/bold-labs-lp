@@ -42,6 +42,13 @@ export const ui: UI = {
     "services.link-card-primary-description":
       "Precisa de uma equipe criativa para dar vida à sua marca? A Bold Labs faz acontecer!",
     "services.link-card-primary-link": "Conheça",
+    // Contact section
+    "contact.title-text-1": "Inovar",
+    "contact.title-text-2": "Inspirar",
+    "contact.title-text-3": "Criar",
+    "contact.subtitle":
+      "Encontrar a voz certa para a sua marca pode ser um desafio. A Bold Labs transforma esse processo, conectando sua empresa a estratégias criativas e inovadoras que fazem a diferença.",
+    "contact.button": "Contrate-nos",
   },
   en: {
     // Navbar
@@ -77,5 +84,12 @@ export const ui: UI = {
     "services.link-card-primary-description":
       "Do you need a creative team to give life to your brand? Bold Labs makes it happen!",
     "services.link-card-primary-link": "Learn",
+    // Contact section
+    "contact.title-text-1": "Innovate",
+    "contact.title-text-2": "Inspire",
+    "contact.title-text-3": "Create",
+    "contact.subtitle":
+      "Finding the right voice for your brand can be a challenge. Bold Labs transforms this process, connecting your company to creative and innovative strategies that make a difference.",
+    "contact.button": "Contact Us",
   },
 } as const;
