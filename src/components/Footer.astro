@@ -1,7 +1,10 @@
 ---
 import footerImage from "@/assets/images/bold-labs-logo.png";
+import { getLangFromUrl, useTranslations } from "@/lib/utils";
 import Image from "astro/components/Image.astro";
 const year = new Date().getFullYear();
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <footer class="bg-txt-100 text-white pt-14 pb-8 mt-24 md:mt-20">
@@ -16,12 +19,12 @@ const year = new Date().getFullYear();
       />
     </div>
     <p class="font-monument text-3xl text-center mt-5 mb-7">
-      Inovar. Inspirar. Criar
+      {t("footer.text")}
     </p>
     <div
       class="md:flex justify-between text-center text-xs md:text-lg max-w-width-footer mx-auto"
     >
-      <p>Copyright © {year} Bold Labs. All rights reserved.</p>
+      <p>{t("footer.copy", String(year))}</p>
       <ul></ul>
     </div>
   </div>

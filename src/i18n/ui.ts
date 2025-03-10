@@ -49,6 +49,9 @@ export const ui: UI = {
     "contact.subtitle":
       "Encontrar a voz certa para a sua marca pode ser um desafio. A Bold Labs transforma esse processo, conectando sua empresa a estratégias criativas e inovadoras que fazem a diferença.",
     "contact.button": "Contrate-nos",
+    // Footer
+    "footer.text": "Inovar. Inspirar. Criar",
+    "footer.copy": "Copyright © {} Bold Labs. Todos os direitos reservados.",
   },
   en: {
     // Navbar
@@ -91,5 +94,8 @@ export const ui: UI = {
     "contact.subtitle":
       "Finding the right voice for your brand can be a challenge. Bold Labs transforms this process, connecting your company to creative and innovative strategies that make a difference.",
     "contact.button": "Contact Us",
+    // Footer
+    "footer.text": "Innovate. Inspire. Create",
+    "footer.copy": "Copyright © {} Bold Labs. All rights reserved.",
   },
 } as const;

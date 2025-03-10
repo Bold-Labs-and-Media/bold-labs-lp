@@ -15,7 +15,9 @@ export function getLangFromUrl(url: URL) {
 }
 
 export function useTranslations(lang: keyof typeof ui) {
-  return function t(key: keyof (typeof ui)[typeof lang]) {
-    return ui[lang][key] || ui[defaultLang][key];
+  return function t(key: keyof (typeof ui)[typeof lang], ...values: string[]) {
+    const translation = ui[lang][key] || ui[defaultLang][key];
+    if (!values) return translation;
+    return translation.replace(/{}/g, () => values.shift() || "");
   };
 }
