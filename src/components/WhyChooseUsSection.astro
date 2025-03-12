@@ -1,0 +1,58 @@
+---
+import StarSVG2 from "@/components/svg/StarSVG2.astro";
+import { getLangFromUrl, useTranslations } from "@/lib/utils";
+import WhyUsListItem from "./common/WhyUsListItem.astro";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+type WhyUsItem = {
+  title: string;
+  description: string;
+};
+
+const whyUsList: WhyUsItem[] = Array.from({ length: 4 }).map((_, index) => ({
+  description: t(`why-us.list-item-${index + 1}-description`),
+  title: t(`why-us.list-item-${index + 1}-title`),
+}));
+---
+
+<div class="relative mt-14 py-20 md:py-40 bg-txt-100 text-white">
+  <div
+    class="absolute hidden md:block -rotate-90 bg-txt-600 px-6 py-4 -translate-x-16 text-white left-0 top-36 font-medium uppercase"
+  >
+    <p>{t("why-us.side-title")}</p>
+  </div>
+  <section class="wrapper relative">
+    <div class="absolute -top-10 md:top-0 md:left-16 left-4">
+      <StarSVG2 color="#fff" />
+    </div>
+    <div class="absolute md:top-36 md:right-16 top-20 right-8">
+      <StarSVG2 color="#fff" />
+    </div>
+    <div class="max-w-xl mx-auto">
+      <h2 class="font-monument text-center md:text-4.5xl">
+        {t("why-us.title")}
+        <span
+          class="-skew-x-[10deg] bg-primary rounded-sm p-1 leading-tight inline-block text-white"
+          ><span>{t("why-us.marked-title")}</span></span
+        >
+      </h2>
+      <p
+        class="mt-5 md:mt-6 leading-[170%] text-center text-neutral-400 text-xxs md:text-base"
+      >
+        {t("why-us.subtitle")}
+      </p>
+    </div>
+    <ul class="mt-14 grid grid-cols-1 gap-4 md:grid-cols-2">
+      {
+        whyUsList.map(({ description, title }, index) => (
+          <WhyUsListItem
+            description={description}
+            number={`0${index + 1}`}
+            title={title}
+          />
+        ))
+      }
+    </ul>
+  </section>
+</div>
