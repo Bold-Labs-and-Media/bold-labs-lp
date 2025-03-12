@@ -1,0 +1,32 @@
+---
+import { getLangFromUrl, useTranslations } from "@/lib/utils";
+import ProjectsCarousel from "./interactive/ProjectsCarousel";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div class="relative mt-14">
+  <div
+    class="absolute hidden md:block -rotate-90 bg-primary px-6 py-4 -translate-x-16 text-white left-5 top-36 font-medium uppercase"
+  >
+    <p>{t("portfolio.side-title")}</p>
+  </div>
+  <section class="wrapper relative">
+    <div class="max-w-xl lg:max-w-1/2 lg:mx-0 lg:text-left text-center mx-auto">
+      <h2 class="font-monument md:text-4.5xl">
+        {t("portfolio.title-1")}
+        <span
+          class="-skew-x-[10deg] bg-primary rounded-sm p-1 leading-tight inline-block text-white"
+          ><span>{t("portfolio.marked-title")}</span></span
+        >
+        {t("portfolio.title-2")}
+      </h2>
+      <p class="md:mt-6 leading-[170%] text-txt-700 text-xxs md:text-xl">
+        {t("portfolio.subtitle")}
+      </p>
+    </div>
+    <div class="mt-11 mx-auto md:max-w-7xl px-8">
+      <ProjectsCarousel client:load projects={[]} />
+    </div>
+  </section>
+</div>

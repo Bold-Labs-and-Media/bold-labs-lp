@@ -60,6 +60,13 @@ export const ui: UI = {
     "why-us.list-item-4-title": "Impacto Real",
     "why-us.list-item-4-description":
       "Transformamos ideias em experiências memoráveis que impulsionam negócios e inspiram mercados.",
+    // Portfolio section
+    "portfolio.title-1": "Nossa",
+    "portfolio.marked-title": "Criatividade",
+    "portfolio.title-2": "em ação",
+    "portfolio.side-title": "Portfolio",
+    "portfolio.subtitle":
+      "Projetos que transformam ideias em impacto. Explore as campanhas e estratégias que ajudaram marcas africanas a se destacarem.",
     // FAQ Section
     "faq.title": "Perguntas",
     "faq.marked-title": "Frequentes",

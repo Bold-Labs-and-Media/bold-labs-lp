@@ -18,6 +18,8 @@ export function useTranslations(lang: keyof typeof ui) {
   return function t(key: keyof (typeof ui)[typeof lang], ...values: string[]) {
     const translation = ui[lang][key] || ui[defaultLang][key];
     if (!values) return translation;
-    return translation.replace(/{}/g, () => values.shift() || "");
+    return translation
+      ? translation.replace(/{}/g, () => values.shift() || "")
+      : "";
   };
 }
