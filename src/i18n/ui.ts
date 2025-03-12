@@ -114,6 +114,24 @@ export const ui: UI = {
     "services.link-card-primary-description":
       "Do you need a creative team to give life to your brand? Bold Labs makes it happen!",
     "services.link-card-primary-link": "Learn",
+    // Why Us Section
+    "why-us.title": "Why choose Bold",
+    "why-us.marked-title": "Labs",
+    "why-us.subtitle":
+      "We bring together local expertise, innovation, and global vision to transform African brands into market leaders.",
+    "why-us.side-title": "Why Bold Labs?",
+    "why-us.list-item-1-title": "Market Understanding",
+    "why-us.list-item-1-description":
+      "We understand the African market, its culture, and its challenges.",
+    "why-us.list-item-2-title": "Custom Innovation",
+    "why-us.list-item-2-description":
+      "We tailor creative solutions to meet the specific needs of African brands.",
+    "why-us.list-item-3-title": "Global Presence",
+    "why-us.list-item-3-description":
+      "Aliamos tendências globais à identidade local, posicionando marcas africanas no cenário internacional.",
+    "why-us.list-item-4-title": "Real Impact",
+    "why-us.list-item-4-description":
+      "Transformamos ideias em experiências memoráveis que impulsionam negócios e inspiram mercados.",
     // FAQ Section
     "faq.title": "Frequent",
     "faq.marked-title": "Questions",
