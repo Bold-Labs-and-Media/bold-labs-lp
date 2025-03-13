@@ -1,4 +1,5 @@
 ---
+import faqImage from "@/assets/images/faq.jpg";
 import { getLangFromUrl, useTranslations } from "@/lib/utils";
 import { Image } from "astro:assets";
 import FAQ from "./interactive/FAQ";
@@ -28,7 +29,7 @@ const t = useTranslations(lang);
     <div class="flex items-start gap-6 mt-14 justify-between">
       <Image
         class="rounded-2.5xl hidden md:block object-cover object-center max-w-lg"
-        src="https://placehold.co/455x580"
+        src={faqImage}
         width={455}
         height={663}
         alt=""

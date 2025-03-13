@@ -1,4 +1,5 @@
 ---
+import work1Image from "@/assets/images/work-1.jpg";
 import { getLangFromUrl, useTranslations } from "@/lib/utils";
 import { Image } from "astro:assets";
 import BlackStarSVG from "./svg/BlackStar.astro";
@@ -24,15 +25,15 @@ const t = useTranslations(lang);
     <div class="flex-1 h-0.5 bg-txt-100"></div>
   </div>
   <Image
-    class="rounded-2.5xl hidden md:block object-cover object-center mt-7"
-    src="https://placehold.co/1352x280"
+    class="rounded-2.5xl hidden md:block object-cover max-h-[280px] mt-7"
+    src={work1Image}
     width={1352}
     height={280}
     alt=""
   />
   <Image
-    class="rounded-2.5xl md:hidden object-cover object-center mt-7 w-full max-w-xs mx-auto"
-    src="https://placehold.co/334x280"
+    class="rounded-2.5xl md:hidden object-cover max-h-[280px] object-center mt-7 w-full max-w-xs mx-auto"
+    src={work1Image}
     width={334}
     height={280}
     alt=""

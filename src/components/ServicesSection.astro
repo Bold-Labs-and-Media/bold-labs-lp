@@ -1,4 +1,5 @@
 ---
+import serviceImage from "@/assets/images/services.jpg";
 import { getLangFromUrl, useTranslations } from "@/lib/utils";
 import { Image } from "astro:assets";
 import { ArrowDown, ArrowRight } from "lucide-react";
@@ -43,7 +44,7 @@ const services = [t("services.1"), t("services.2"), t("services.3")];
     </div>
     <Image
       class="rounded-2.5xl hidden md:block h-full object-cover object-center row-span-2"
-      src="https://placehold.co/455x580"
+      src={serviceImage}
       width={455}
       height={508}
       alt=""

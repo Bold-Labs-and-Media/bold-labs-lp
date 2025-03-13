@@ -2,6 +2,9 @@
 import { getLangFromUrl, useTranslations } from "@/lib/utils";
 import { Image } from "astro:assets";
 
+import hero1Image from "@/assets/images/hero-1.jpg";
+import hero2Image from "@/assets/images/hero-2.jpg";
+import hero3Image from "@/assets/images/hero-3.jpg";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
@@ -25,32 +28,32 @@ const t = useTranslations(lang);
     {t("hero.subtitle")}
   </p>
   <div
-    class="absolute w-full left-1/2 -translate-x-1/2 -bottom-2 flex max-w-xl md:max-w-4xl lg:max-w-5xl md:-bottom-16 px-4 gap-2"
+    class="absolute w-full left-1/2 -translate-x-1/2 -bottom-2 flex max-w-xl md:max-w-4xl lg:max-w-7xl md:-bottom-16 px-4 gap-2"
   >
     <Image
       class="rounded-2.5xl w-1/4 -translate-y-4 relative z-10 rotate-6 border-image"
-      src="https://placehold.co/297"
+      src={hero1Image}
       width={297}
       height={297}
       alt=""
     />
     <Image
       class="rounded-2.5xl w-1/4 translate-y-2 -rotate-8 border-image"
-      src="https://placehold.co/297"
+      src={hero2Image}
       width={297}
       height={297}
       alt=""
     />
     <Image
       class="rounded-2.5xl w-1/4 rotate-3 border-image"
-      src="https://placehold.co/297"
+      src={hero3Image}
       width={297}
       height={297}
       alt=""
     />
     <Image
       class="rounded-2.5xl w-1/4 relative z-10 -rotate-8 border-image"
-      src="https://placehold.co/297"
+      src={hero1Image}
       width={297}
       height={297}
       alt=""
