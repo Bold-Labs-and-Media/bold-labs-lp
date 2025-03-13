@@ -1,11 +1,12 @@
 ---
 import { getLangFromUrl, useTranslations } from "@/lib/utils";
+import { Image } from "astro:assets";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<div class="pt-[132px] pb-[103px]">
+<div class="pt-[132px] pb-[143px] md:pb-[230px] relative">
   <div
     class="capitalize text-center font-monument text-3xl md:text-big-hero text-white"
   >
@@ -23,4 +24,36 @@ const t = useTranslations(lang);
   >
     {t("hero.subtitle")}
   </p>
+  <div
+    class="absolute w-full left-1/2 -translate-x-1/2 -bottom-2 flex max-w-xl md:max-w-4xl lg:max-w-5xl md:-bottom-16 px-4 gap-2"
+  >
+    <Image
+      class="rounded-2.5xl w-1/4 -translate-y-4 relative z-10 rotate-6 border-image"
+      src="https://placehold.co/297"
+      width={297}
+      height={297}
+      alt=""
+    />
+    <Image
+      class="rounded-2.5xl w-1/4 translate-y-2 -rotate-8 border-image"
+      src="https://placehold.co/297"
+      width={297}
+      height={297}
+      alt=""
+    />
+    <Image
+      class="rounded-2.5xl w-1/4 rotate-3 border-image"
+      src="https://placehold.co/297"
+      width={297}
+      height={297}
+      alt=""
+    />
+    <Image
+      class="rounded-2.5xl w-1/4 relative z-10 -rotate-8 border-image"
+      src="https://placehold.co/297"
+      width={297}
+      height={297}
+      alt=""
+    />
+  </div>
 </div>

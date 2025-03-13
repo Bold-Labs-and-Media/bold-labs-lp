@@ -96,6 +96,11 @@ html {
   padding-inline: 30px;
 }
 
+.border-image {
+  border: 8px solid #ffffff;
+  box-shadow: 0px 8px 80px 0px #0000000f;
+}
+
 @keyframes slideDown {
   from {
     height: 0px;

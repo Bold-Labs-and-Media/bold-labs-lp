@@ -17,11 +17,11 @@ export default function MobileNavMenu({ children }: PropsWithChildren) {
   };
 
   return (
-    <div className="relative lg:hidden block">
+    <div className="relative block lg:hidden">
       <button
         onClick={openMenuClick}
         type="button"
-        className="bg-primary size-10 md:size-14 flex justify-center items-center rounded-lg"
+        className="bg-primary flex size-10 items-center justify-center rounded-lg md:size-14"
       >
         <svg
           className="size-6 md:size-8"
@@ -32,23 +32,23 @@ export default function MobileNavMenu({ children }: PropsWithChildren) {
           <path
             d="M3 12H21"
             stroke="white"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           ></path>
           <path
             d="M3 6H21"
             stroke="white"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           ></path>
           <path
             d="M3 18H21"
             stroke="white"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           ></path>
         </svg>
       </button>
