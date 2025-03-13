@@ -100,13 +100,13 @@ export const ui: UI = {
     "nav.portfolio": "Portfolio",
     "nav.testimonials": "Testimonials",
     "nav.language": "Language",
-    "nav.contact": "Contact Us",
+    "nav.contact": "Contact",
     // Hero section
     "hero.marked-title": "The bridge",
     "hero.title": "Between",
-    "hero.small-title": "And the Future of the Market",
+    "hero.small-title": "and the future of the market",
     "hero.subtitle":
-      "Bold Labs is a creative innovation laboratory, agency, and consulting firm specializing in empowering African brands to stand out globally through creativity and innovation.",
+      "Bold Labs is a creative innovation lab, agency, and consultancy specializing in empowering African brands to stand out.",
     // Introduction section
     "introduction.title":
       "Bold Labs: Transforming Narratives, Leading Innovation in Africa",
@@ -122,50 +122,58 @@ export const ui: UI = {
     "services.2": "Strategy and Image Management",
     "services.3": "Training and Consulting",
     "services.link-card-black-description":
-      "Have you ever imagined how a brand can become unforgettable?",
+      "Ever wondered how a brand becomes unforgettable?",
     "services.link-card-black-link": "See",
     "services.link-card-primary-description":
-      "Do you need a creative team to give life to your brand? Bold Labs makes it happen!",
-    "services.link-card-primary-link": "Learn",
-    // Why Us Section
-    "why-us.title": "Why choose Bold",
-    "why-us.marked-title": "Labs",
+      "Need a creative team to bring your brand to life? Bold Labs makes it happen!",
+    "services.link-card-primary-link": "Discover",
+    // Why Us section
+    "why-us.side-title": "Why us?",
+    "why-us.title": "Why choose Bold ",
+    "why-us.marked-title": "Labs?",
     "why-us.subtitle":
-      "We bring together local expertise, innovation, and global vision to transform African brands into market leaders.",
-    "why-us.side-title": "Why Bold Labs?",
-    "why-us.list-item-1-title": "Market Understanding",
+      "We combine local expertise, innovation, and global vision to transform African brands into market leaders.",
+    "why-us.list-item-1-title": "Market Knowledge",
     "why-us.list-item-1-description":
-      "We understand the African market, its culture, and its challenges.",
-    "why-us.list-item-2-title": "Custom Innovation",
+      "We understand the cultural nuances and challenges of the African market, creating authentic and effective strategies.",
+    "why-us.list-item-2-title": "Tailored Innovation",
     "why-us.list-item-2-description":
-      "We tailor creative solutions to meet the specific needs of African brands.",
-    "why-us.list-item-3-title": "Global Presence",
+      "We develop custom creative solutions, making African brands stand out with unique and strategic approaches.",
+    "why-us.list-item-3-title": "Global Connection",
     "why-us.list-item-3-description":
-      "Aliamos tendências globais à identidade local, posicionando marcas africanas no cenário internacional.",
+      "We blend global trends with local identity, positioning African brands on the international stage.",
     "why-us.list-item-4-title": "Real Impact",
     "why-us.list-item-4-description":
-      "Transformamos ideias em experiências memoráveis que impulsionam negócios e inspiram mercados.",
+      "We turn ideas into memorable experiences that drive businesses and inspire markets.",
+    // Portfolio section
+    "portfolio.title-1": "Our",
+    "portfolio.marked-title": "Creativity",
+    "portfolio.title-2": "in action",
+    "portfolio.side-title": "Portfolio",
+    "portfolio.subtitle":
+      "Projects that turn ideas into impact. Explore the campaigns and strategies that helped African brands stand out.",
     // Testimonials Section
-    "testimonials.marked-title": "What our",
-    "testimonials.title": "clients say",
-    "testimonials.subtitle":
-      "Bold Labs is a creative innovation laboratory, agency, and consulting firm specializing in empowering African brands to stand out globally through creativity and innovation.",
     "testimonials.side-title": "Testimonials",
+    "testimonials.marked-title": "What they say",
+    "testimonials.title": "about us",
+    "testimonials.subtitle":
+      "Real stories of brands that turned challenges into achievements with Bold Labs.",
     // FAQ Section
-    "faq.title": "Frequent",
-    "faq.marked-title": "Questions",
+    "faq.title": "Frequently",
+    "faq.marked-title": "Asked Questions",
+    "faq.side-title": "FAQ",
     "faq.subtitle":
       "From strategy to execution, we create innovative solutions that elevate African brands, connecting creativity, technology, and real impact.",
-    "faq.question": "What is Bold Labs?",
-    "faq.answer":
-      "Bold Labs is a creative innovation laboratory, agency, and consulting firm specializing in empowering African brands to stand out globally through creativity and innovation.",
+    "faq.question-1": "What is Bold Labs?",
+    "faq.answer-1":
+      "Bold Labs is a creative agency specializing in branding, design, digital marketing, and content production. We create innovative experiences for brands looking to stand out in the market.",
     // Contact section
     "contact.title-text-1": "Innovate",
     "contact.title-text-2": "Inspire",
     "contact.title-text-3": "Create",
     "contact.subtitle":
-      "Finding the right voice for your brand can be a challenge. Bold Labs transforms this process, connecting your company to creative and innovative strategies that make a difference.",
-    "contact.button": "Contact Us",
+      "Finding the right voice for your brand can be a challenge. Bold Labs transforms this process, connecting your business with creative and innovative strategies that make a difference.",
+    "contact.button": "Hire us",
     // Footer
     "footer.text": "Innovate. Inspire. Create",
     "footer.copy": "Copyright © {} Bold Labs. All rights reserved.",
