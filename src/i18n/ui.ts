@@ -67,6 +67,12 @@ export const ui: UI = {
     "portfolio.side-title": "Portfolio",
     "portfolio.subtitle":
       "Projetos que transformam ideias em impacto. Explore as campanhas e estratégias que ajudaram marcas africanas a se destacarem.",
+    // Testimonials Section
+    "testimonials.side-title": "Testemunhos",
+    "testimonials.marked-title": "O que dizem",
+    "testimonials.title": "sobre nós",
+    "testimonials.subtitle":
+      "Histórias reais de marcas que transformaram seus desafios em conquistas com a Bold Labs.",
     // FAQ Section
     "faq.title": "Perguntas",
     "faq.marked-title": "Frequentes",
@@ -139,6 +145,12 @@ export const ui: UI = {
     "why-us.list-item-4-title": "Real Impact",
     "why-us.list-item-4-description":
       "Transformamos ideias em experiências memoráveis que impulsionam negócios e inspiram mercados.",
+    // Testimonials Section
+    "testimonials.marked-title": "What our",
+    "testimonials.title": "clients say",
+    "testimonials.subtitle":
+      "Bold Labs is a creative innovation laboratory, agency, and consulting firm specializing in empowering African brands to stand out globally through creativity and innovation.",
+    "testimonials.side-title": "Testimonials",
     // FAQ Section
     "faq.title": "Frequent",
     "faq.marked-title": "Questions",
