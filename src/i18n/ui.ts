@@ -13,7 +13,7 @@ export const ui: UI = {
     "nav.home": "Início",
     "nav.services": "Serviços",
     "nav.portfolio": "Portfólio",
-    "nav.testimonials": "Depoimentos",
+    "nav.testimonials": "Testemunhos",
     "nav.language": "Idioma",
     "nav.contact": "Contacto",
     // Hero section
