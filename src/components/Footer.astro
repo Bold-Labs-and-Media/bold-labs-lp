@@ -5,6 +5,7 @@ import Image from "astro/components/Image.astro";
 import SocialMediaLink from "./common/SocialMediaLink.astro";
 import FacebookIcon from "./svg/FacebookIcon.astro";
 import InstagramIcon from "./svg/InstagramIcon.astro";
+import LinkedInIcon from "./svg/LinkedInIcon.astro";
 import XIcon from "./svg/XIcon.astro";
 const year = new Date().getFullYear();
 const lang = getLangFromUrl(Astro.url);
@@ -36,8 +37,11 @@ const t = useTranslations(lang);
         <SocialMediaLink href="https://www.facebook.com/">
           <FacebookIcon slot="icon" />
         </SocialMediaLink>
-        <SocialMediaLink href="https://www.instagram.com/">
+        <SocialMediaLink href="https://x.com/">
           <XIcon slot="icon" />
+        </SocialMediaLink>
+        <SocialMediaLink href="https://www.linkedin.com/">
+          <LinkedInIcon slot="icon" />
         </SocialMediaLink>
       </ul>
     </div>
