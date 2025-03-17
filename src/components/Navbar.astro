@@ -13,9 +13,11 @@ const t = useTranslations(lang);
 <header
   class="flex justify-between max-w-max-width-navbar mx-auto items-center wrapper"
 >
-  <Image src={navbarLogoImage} alt="Bold Labs Logo" width={127} height={61} />
+  <Image src={navbarLogoImage} alt="Bold Labs Logo" width={198} height={109} />
   <nav class="hidden lg:block">
-    <ul class="flex items-center gap-14 text-white text-lg">
+    <ul
+      class="flex items-center gap-14 text-white text-lg *:hover:text-primary *:duration-300"
+    >
       <li><a href="#">{t("nav.home")}</a></li>
       <li><a href="#services">{t("nav.services")}</a></li>
       <li><a href="#portfolio">{t("nav.portfolio")}</a></li>
@@ -38,7 +40,9 @@ const t = useTranslations(lang);
     >{t("nav.contact")}
   </a>
   <MobileNavMenu client:visible>
-    <ul class="flex flex-col gap-8 text-xl text-white">
+    <ul
+      class="flex flex-col gap-8 text-xl text-white *:hover:text-primary *:duration-300"
+    >
       <li>
         <a href="#">{t("nav.home")}</a>
       </li>

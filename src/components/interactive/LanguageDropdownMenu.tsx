@@ -13,6 +13,7 @@ type Props = {
     label: string;
   }[];
 };
+
 export default function LanguageDropdownMenu({ label, languages }: Props) {
   return (
     <DropdownMenu>
@@ -20,10 +21,12 @@ export default function LanguageDropdownMenu({ label, languages }: Props) {
         {label}
         <ChevronDown />
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="bg-txt-100 text-white border-txt-200 px-4">
+      <DropdownMenuContent className="bg-txt-100 border-txt-200 px-4 text-white">
         {languages.map(({ code, label }) => (
           <DropdownMenuItem key={code}>
-            <a href={`/${code}`}>{label}</a>
+            <a className="hover:text-primary duration-300" href={`/${code}`}>
+              {label}
+            </a>
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
