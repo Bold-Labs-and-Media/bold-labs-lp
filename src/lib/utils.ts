@@ -6,7 +6,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function getLangFromUrl(url: URL) {
+export function getLangFromUrl(url: URL | Location) {
   const [, lang] = url.pathname.split("/");
   if (lang in ui) {
     return lang as keyof typeof ui;

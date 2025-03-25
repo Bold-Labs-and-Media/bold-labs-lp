@@ -1,11 +1,9 @@
 ---
-import serviceImage from "@/assets/images/services.jpg";
 import { getLangFromUrl, useTranslations } from "@/lib/utils";
-import { Image } from "astro:assets";
-import { ArrowDown, ArrowRight } from "lucide-react";
+import { ArrowDown } from "lucide-react";
+import Services from "./interactive/Services";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const services = [t("services.1"), t("services.2"), t("services.3")];
 ---
 
 <div class="relative mt-10 lg:mt-[121px] md:pl-10">
@@ -26,29 +24,7 @@ const services = [t("services.1"), t("services.2"), t("services.3")];
         ><span>{t("services.marked-title")}</span></span
       >
     </h2>
-    <div class="mt-6 md:mt-0 row-span-2">
-      <p class="text-xxs leading-[170%] text-center md:text-left md:text-xl">
-        {t("services.subtitle")}
-      </p>
-      <ul class="mt-8.5 flex gap-8 flex-col">
-        {
-          services.map((service, index) => (
-            <li class="flex gap-3 hover:bg-txt-100 hover:text-txt-400 cursor-pointer duration-500 rounded-5xl items-center px-10 py-8 border border-txt-400 text-sm font-medium text-foreground md:text-xl">
-              <span class="font-monument text-lg">0{index + 1}</span>
-              <p class="flex-1">{service}</p>
-              <ArrowRight size={24} />
-            </li>
-          ))
-        }
-      </ul>
-    </div>
-    <Image
-      class="rounded-2.5xl hidden md:block h-full object-cover object-center row-span-2"
-      src={serviceImage}
-      width={455}
-      height={508}
-      alt=""
-    />
+    <Services lang={lang} client:media="(width >= 48rem /* 768px */)" />
     <div
       class="hidden md:flex rounded-4xl bg-txt-500 p-8 flex-col justify-between text-white"
     >
