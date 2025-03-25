@@ -8,9 +8,9 @@ const t = useTranslations(lang);
 const services = [t("services.1"), t("services.2"), t("services.3")];
 ---
 
-<div class="relative mt-[90px] lg:mt-[121px] md:pl-10">
+<div class="relative mt-10 lg:mt-[121px] md:pl-10">
   <div
-    class="absolute hidden md:block -rotate-90 bg-primary px-6 py-4 -translate-x-16 text-white left-4 top-0 font-medium uppercase"
+    class="absolute hidden md:block -rotate-90 bg-primary px-6 py-4 -translate-x-16 text-white left-0 top-0 font-medium uppercase"
   >
     <p>{t("services.side-title")}</p>
   </div>
@@ -33,7 +33,7 @@ const services = [t("services.1"), t("services.2"), t("services.3")];
       <ul class="mt-8.5 flex gap-8 flex-col">
         {
           services.map((service, index) => (
-            <li class="flex gap-3  rounded-5xl items-center px-10 py-8 border border-txt-400 text-sm font-medium text-foreground md:text-xl">
+            <li class="flex gap-3 hover:bg-txt-100 hover:text-txt-400 cursor-pointer duration-500 rounded-5xl items-center px-10 py-8 border border-txt-400 text-sm font-medium text-foreground md:text-xl">
               <span class="font-monument text-lg">0{index + 1}</span>
               <p class="flex-1">{service}</p>
               <ArrowRight size={24} />
@@ -57,11 +57,12 @@ const services = [t("services.1"), t("services.2"), t("services.3")];
       </p>
       <div class="flex justify-between items-center font-semibold">
         <p class="text-2xl">{t("services.link-card-black-link")}</p>
-        <div
-          class="size-16 flex items-center justify-center text-lg rounded-full bg-txt-600"
+        <a
+          href="#"
+          class="size-16 hover:bg-txt-400 hover:text-txt-600 duration-300 flex items-center justify-center text-lg rounded-full bg-txt-600"
         >
           <ArrowDown size={24} />
-        </div>
+        </a>
       </div>
     </div>
     <div
@@ -73,11 +74,12 @@ const services = [t("services.1"), t("services.2"), t("services.3")];
       <div class="font-semibold flex justify-between items-center">
         <p class="text-2xl">{t("services.link-card-primary-link")}</p>
         <div>
-          <div
-            class="size-16 flex items-center justify-center text-lg rounded-full bg-white"
+          <a
+            href="#"
+            class="size-16 flex items-center duration-300 hover:bg-txt-100 hover:text-txt-400 justify-center text-lg rounded-full bg-white"
           >
             <ArrowDown size={24} />
-          </div>
+          </a>
         </div>
       </div>
     </div>

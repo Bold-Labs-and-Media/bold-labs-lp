@@ -17,7 +17,7 @@ type Props = {
 export default function LanguageDropdownMenu({ label, languages }: Props) {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className="flex items-center gap-2.5">
+      <DropdownMenuTrigger className="flex cursor-pointer items-center gap-2.5">
         {label}
         <ChevronDown />
       </DropdownMenuTrigger>

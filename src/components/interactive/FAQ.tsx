@@ -15,7 +15,7 @@ export default function FAQ({ lang }: Props) {
   const faq = lang === "en" ? faqData_EN : faqData_PT;
 
   return (
-    <Accordion type="single" collapsible className="max-w-2xl">
+    <Accordion type="single" collapsible className="flex-1">
       {faq.map(({ question, answer }) => (
         <AccordionItem
           key={question}

@@ -13,7 +13,13 @@ const t = useTranslations(lang);
 <header
   class="flex justify-between max-w-max-width-navbar mx-auto items-center wrapper"
 >
-  <Image src={navbarLogoImage} alt="Bold Labs Logo" width={198} height={109} />
+  <Image
+    src={navbarLogoImage}
+    alt="Bold Labs Logo"
+    class="md:max-w-none max-w-28"
+    width={198}
+    height={109}
+  />
   <nav class="hidden lg:block">
     <ul
       class="flex items-center gap-14 text-white text-lg *:hover:text-primary *:duration-300"

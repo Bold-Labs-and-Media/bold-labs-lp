@@ -9,7 +9,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<div class="pt-[132px] pb-[143px] md:pb-[230px] relative">
+<div class="py-10 md:pt-[132px] md:pb-[230px] relative">
   <div
     class="capitalize text-center font-monument text-3xl md:text-big-hero text-white"
   >
@@ -28,7 +28,7 @@ const t = useTranslations(lang);
     {t("hero.subtitle")}
   </p>
   <div
-    class="absolute w-full left-1/2 -translate-x-1/2 -bottom-2 flex max-w-xl md:max-w-4xl lg:max-w-7xl md:-bottom-16 px-4 gap-2"
+    class="absolute w-full left-1/2 -translate-x-1/2 -bottom-2 max-w-xl md:max-w-4xl lg:max-w-7xl md:-bottom-16 px-4 gap-2 hidden md:flex"
   >
     <Image
       class="rounded-2.5xl w-1/4 -translate-y-4 relative z-10 rotate-6 border-image"

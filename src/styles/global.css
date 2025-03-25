@@ -62,6 +62,9 @@
 
   --font-sans: "Archivo Variable", sans-serif;
   --font-monument: "MonumentExtended", sans-serif;
+
+  --animate-accordion-up: slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1);
+  --animate-accordion-down: slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1);
 }
 
 @layer base {
@@ -100,10 +103,9 @@ html {
   border: 8px solid #ffffff;
   box-shadow: 0px 8px 80px 0px #0000000f;
 }
-
 @keyframes slideDown {
   from {
-    height: 0px;
+    height: 0;
   }
   to {
     height: var(--radix-accordion-content-height);
@@ -115,6 +117,6 @@ html {
     height: var(--radix-accordion-content-height);
   }
   to {
-    height: 0px;
+    height: 0;
   }
 }

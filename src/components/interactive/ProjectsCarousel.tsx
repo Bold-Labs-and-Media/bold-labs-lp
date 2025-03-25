@@ -70,8 +70,8 @@ export default function ProjectsCarousel({}: Props) {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="top-1/4 size-10 border-black bg-black text-white duration-300 disabled:bg-white disabled:text-black lg:top-1/3" />
-        <CarouselNext className="top-1/4 size-10 border-black bg-black text-white duration-300 disabled:bg-white disabled:text-black lg:top-1/3" />
+        <CarouselPrevious className="top-[20%] -left-[45px] size-10 border-black bg-black text-white duration-300 disabled:bg-white disabled:text-black md:top-[30%]" />
+        <CarouselNext className="top-[20%] -right-[45px] size-10 translate-y-0 border-black bg-black text-white duration-300 disabled:bg-white disabled:text-black md:top-[30%]" />
       </Carousel>
     </div>
   );
