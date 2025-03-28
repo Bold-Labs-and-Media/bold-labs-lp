@@ -25,16 +25,23 @@ export default function Services({ lang }: Props) {
         </p>
         <ul className="mt-8.5 flex flex-col gap-8">
           {services.map((service, index) => (
-            <li>
+            <li key={index}>
               <button
                 type="button"
                 onClick={() => setSelectedIndex(index)}
                 className={cn(
-                  "hover:bg-txt-100 hover:text-txt-400 rounded-5xl border-txt-400 text-foreground flex cursor-pointer items-center gap-3 border px-10 py-8 text-sm font-medium duration-500 hover:shadow-2xl md:text-xl",
+                  "hover:bg-txt-100 hover:text-txt-400 rounded-5xl border-txt-400 text-foreground flex w-full cursor-pointer items-center gap-3 border px-10 py-8 text-sm font-medium duration-500 hover:shadow-2xl md:text-xl",
                   index == selectedIndex && "bg-txt-100 text-txt-400",
                 )}
               >
-                <span className="font-monument text-lg">0{index + 1}</span>
+                <span
+                  className={cn(
+                    "font-monument text-lg",
+                    index === selectedIndex && "text-primary",
+                  )}
+                >
+                  0{index + 1}
+                </span>
                 <p className="flex-1">{service}</p>
                 <ArrowRight className="hidden md:block" size={24} />
               </button>
