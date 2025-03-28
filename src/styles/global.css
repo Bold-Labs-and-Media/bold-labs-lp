@@ -120,3 +120,8 @@ html {
     height: 0;
   }
 }
+
+.bg-pattern {
+  background: var(--color-primary) url("/images/pattern.png") repeat;
+  background-size: 700px;
+}

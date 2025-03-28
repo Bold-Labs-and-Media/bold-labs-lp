@@ -1,15 +1,15 @@
 ---
-import { getLangFromUrl, useTranslations } from "@/lib/utils";
-import { Image } from "astro:assets";
-
 import hero1Image from "@/assets/images/hero-1.jpg";
 import hero2Image from "@/assets/images/hero-2.jpg";
 import hero3Image from "@/assets/images/hero-3.jpg";
+import { getLangFromUrl, useTranslations } from "@/lib/utils";
+import { Image } from "astro:assets";
+
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<div class="py-10 md:pt-[132px] md:pb-[230px] relative">
+<div class="py-10 md:pt-[132px] md:pb-[120px] md:mb-[240px] relative">
   <div
     class="capitalize text-center font-monument text-3xl md:text-big-hero text-white"
   >
@@ -27,8 +27,25 @@ const t = useTranslations(lang);
   >
     {t("hero.subtitle")}
   </p>
+
+  <div class="absolute -bottom-[245px] w-full overflow-hidden left-0 leading-0">
+    <svg
+      viewBox="0 0 1200 120"
+      preserveAspectRatio="none"
+      class="relative block w-[calc(283%+1.3px)] h-[250px]"
+    >
+      <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="fill-txt-100"
+      ></path>
+    </svg>
+    <div
+      style="clip-path: polygon(100% 20%, 100% 60%, 0 40%, 0 0);"
+      class="bg-pattern clip w-full h-[174px] bottom-[70px] absolute"
+    >
+    </div>
+  </div>
+
   <div
-    class="absolute w-full left-1/2 -translate-x-1/2 -bottom-2 max-w-xl md:max-w-4xl lg:max-w-7xl md:-bottom-16 px-4 gap-2 hidden md:flex"
+    class="absolute w-full left-1/2 -translate-x-1/2 -bottom-2 max-w-xl md:max-w-4xl lg:max-w-7xl md:-bottom-[180px] px-4 gap-2 hidden md:flex"
   >
     <Image
       class="rounded-2.5xl w-1/4 -translate-y-4 relative z-10 rotate-6 border-image"
