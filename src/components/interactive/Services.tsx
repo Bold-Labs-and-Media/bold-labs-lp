@@ -20,17 +20,21 @@ export default function Services({ lang }: Props) {
   return (
     <>
       <div className="row-span-2 mt-6 md:mt-0">
-        <p className="text-xxs text-center leading-[170%] md:text-left md:text-xl">
+        <p className="text-xxs animation-left-title-appear text-center leading-[170%] md:text-left md:text-xl">
           {t("services.subtitle")}
         </p>
         <ul className="mt-8.5 flex flex-col gap-8">
           {services.map((service, index) => (
             <li key={index}>
               <button
+                style={{
+                  animationDelay: `${index * 0.2}s`,
+                  animationRange: "entry 0% cover 15%",
+                }}
                 type="button"
                 onClick={() => setSelectedIndex(index)}
                 className={cn(
-                  "hover:bg-txt-100 hover:text-txt-400 rounded-5xl border-txt-400 text-foreground flex w-full cursor-pointer items-center gap-3 border px-10 py-8 text-sm font-medium duration-500 hover:shadow-2xl md:text-xl",
+                  "hover:bg-txt-100 hover:text-txt-400 animation-left-title-appear rounded-5xl border-txt-400 text-foreground flex w-full cursor-pointer items-center gap-3 border px-10 py-8 text-sm font-medium duration-500 hover:shadow-2xl md:text-xl",
                   index == selectedIndex && "bg-txt-100 text-txt-400",
                 )}
               >
@@ -55,9 +59,18 @@ export default function Services({ lang }: Props) {
             key={index}
             src={image}
             alt=""
+            style={
+              index !== selectedIndex
+                ? {}
+                : {
+                    animationRange: "entry 0% cover 40%",
+                  }
+            }
             className={cn(
               "rounded-2.5xl h-full object-cover object-center",
-              index !== selectedIndex && "hidden",
+              index !== selectedIndex
+                ? "hidden"
+                : "animation-appear animate-delay-[200ms]",
             )}
           />
         ))}

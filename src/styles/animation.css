@@ -1,0 +1,89 @@
+/* Animation Declaration */
+.animation-appear {
+  animation: appear linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.animation-left-title-appear {
+  animation: appear-left-title linear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 50%;
+}
+
+.animation-center-title-appear {
+  animation: appear-center-title linear both;
+  animation-timeline: view();
+  animation-range: entry 40% cover 70%;
+}
+
+.animation-scale-image {
+  animation: scale-image 1s ease-in-out forwards;
+}
+
+.animation-grow-width {
+  height: 0;
+  animation: growWidth 2s ease-in-out forwards;
+  animation-delay: 800ms;
+}
+
+.why-us-list-element.animate {
+  animation: appear 2s ease-in-out both;
+}
+
+/* Keyframes */
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.8;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes appear-left-title {
+  from {
+    opacity: 0;
+    translate: -10% 0;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes appear-center-title {
+  from {
+    opacity: 0;
+    translate: 0 -50%;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes scale-image {
+  from {
+    opacity: 0;
+    scale: 0.8;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes growWidth {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    height: 174px;
+  }
+}

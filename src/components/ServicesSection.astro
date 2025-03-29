@@ -17,7 +17,7 @@ const t = useTranslations(lang);
     class="wrapper grid md:grid-cols-2 lg:grid-cols-3 md:grid-rows-[auto,1fr,1fr] md:ml-4 gap-y-5 gap-x-6"
   >
     <h2
-      class="font-monument text-center col-span-full md:text-left lg:text-4.5xl"
+      class="font-monument text-center col-span-full md:text-left lg:text-4.5xl animation-left-title-appear"
     >
       {t("services.title")}
       <span
@@ -27,7 +27,7 @@ const t = useTranslations(lang);
     </h2>
     <Services lang={lang} client:media="(width >= 48rem /* 768px */)" />
     <div
-      class="hidden md:flex rounded-4xl bg-txt-500 p-8 flex-col justify-between text-white"
+      class="hidden md:flex rounded-4xl bg-txt-500 p-8 flex-col justify-between text-white animation-appear animate-delay-[300ms]"
     >
       <p class="text-lg leading-[170%]">
         {t("services.link-card-black-description")}
@@ -43,7 +43,7 @@ const t = useTranslations(lang);
       </div>
     </div>
     <div
-      class="hidden md:flex rounded-4xl bg-primary p-8 flex-col justify-between text-txt-100"
+      class="hidden md:flex rounded-4xl bg-primary p-8 flex-col justify-between text-txt-100 animation-appear animate-delay-[400ms]"
     >
       <p class="text-lg leading-[170%]">
         {t("services.link-card-primary-description")}

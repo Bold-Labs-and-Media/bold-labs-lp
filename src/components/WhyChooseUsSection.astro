@@ -16,6 +16,21 @@ const whyUsList: WhyUsItem[] = Array.from({ length: 4 }).map((_, index) => ({
 }));
 ---
 
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate");
+      } else {
+        entry.target.classList.remove("animate");
+      }
+    });
+  });
+  document.querySelectorAll(".why-us-list-element").forEach((element) => {
+    observer.observe(element);
+  });
+</script>
+
 <div class="relative mt-14 bg-txt-100">
   <div
     style="clip-path: polygon(100% 0%, 100% 65%, 0 100%, 0 40%);"
@@ -41,7 +56,9 @@ const whyUsList: WhyUsItem[] = Array.from({ length: 4 }).map((_, index) => ({
         <StarSVG2 color="#fff" />
       </div>
       <div class="max-w-xl mx-auto">
-        <h2 class="font-monument text-center md:text-4.5xl">
+        <h2
+          class="font-monument text-center md:text-4.5xl animation-center-title-appear"
+        >
           {t("why-us.title")}
           <span
             class="-skew-x-[10deg] bg-primary rounded-sm p-1 leading-tight inline-block text-white"
