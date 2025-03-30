@@ -1,8 +1,27 @@
 import { Menu, X } from "lucide-react";
-import { useState, type PropsWithChildren } from "react";
+import { useEffect, useState, type PropsWithChildren } from "react";
 
 export default function MobileNavMenu({ children }: PropsWithChildren) {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const mobileMenuLinks = document.querySelectorAll("#mobile-menu li");
+    console.log(mobileMenuLinks);
+
+    const handleMobileMenuLinkClick = () => {
+      closeMenuOnClick();
+    };
+
+    mobileMenuLinks.forEach((link) => {
+      link.addEventListener("click", handleMobileMenuLinkClick);
+    });
+
+    return () => {
+      mobileMenuLinks.forEach((link) => {
+        link.removeEventListener("click", handleMobileMenuLinkClick);
+      });
+    };
+  }, []);
 
   const openMenuOnClick = () => {
     setIsOpen(true);
