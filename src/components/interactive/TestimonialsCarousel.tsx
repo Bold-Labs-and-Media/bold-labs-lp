@@ -1,10 +1,12 @@
-import type { SVGProps } from "react";
+import { cn } from "@/lib/utils";
+import { useEffect, useState, type SVGProps } from "react";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  type CarouselApi,
 } from "../ui/carousel";
 
 type Testimonial = {
@@ -19,18 +21,40 @@ type Props = {
 };
 
 export default function TestimonialsCarousel({}: Props) {
+  const [api, setApi] = useState<CarouselApi>(undefined);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  useEffect(() => {
+    if (!api) return;
+    setSelectedIndex(api.selectedScrollSnap());
+    const selectCallback = () => {
+      setSelectedIndex(api.selectedScrollSnap());
+    };
+    api.on("select", selectCallback);
+
+    return () => {
+      api.off("select", selectCallback);
+    };
+  }, [api]);
+
   return (
     <div>
       <Carousel
+        setApi={setApi}
         className="w-full"
         opts={{
           loop: true,
         }}
       >
-        <CarouselContent>
+        <CarouselContent className="py-4">
           {Array.from({ length: 5 }).map((_, index) => (
             <CarouselItem key={index} className="md:basis-1/2">
-              <div className="flex flex-col gap-10 rounded-4xl bg-[#2A2A2A] px-10 py-6">
+              <div
+                className={cn(
+                  "flex translate-y-4 flex-col gap-10 rounded-4xl bg-[#2A2A2A] px-10 py-6 opacity-40 duration-300",
+                  selectedIndex === index && "translate-y-0 opacity-100",
+                )}
+              >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
                     {/* <img src="" alt="" width={64} height={64} /> */}
