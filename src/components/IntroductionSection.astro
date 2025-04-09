@@ -10,13 +10,15 @@ const t = useTranslations(lang);
 ---
 
 <section class="wrapper mt-32 md:mt-24">
-  <div class="flex flex-col gap-4 md:flex-row md:gap-6 items-start md:mb-0">
+  <div class="flex flex-col gap-4 md:gap-6 items-start md:mb-4">
     <h2
-      class="font-monument text-center md:text-left md:text-4.5xl text-txt-100 mb-4 animation-appear"
+      class="font-monument text-center md:text-4.5xl text-txt-100 mb-4 animation-appear"
     >
       {t("introduction.title")}
     </h2>
-    <p class="text-center md:text-left md:text-xl text-xxs animation-appear">
+    <p
+      class="text-center md:text-xl max-w-2xl mx-auto text-xxs animation-appear"
+    >
       {t("introduction.subtitle")}
     </p>
   </div>

@@ -1,6 +1,5 @@
 ---
 import { getLangFromUrl, useTranslations } from "@/lib/utils";
-import { ArrowDown } from "lucide-react";
 import Services from "./interactive/Services";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -26,39 +25,5 @@ const t = useTranslations(lang);
       >
     </h2>
     <Services lang={lang} client:media="(width >= 48rem /* 768px */)" />
-    <div
-      class="hidden md:flex rounded-4xl bg-txt-500 p-8 flex-col justify-between text-white animation-appear animate-delay-[300ms]"
-    >
-      <p class="text-lg leading-[170%]">
-        {t("services.link-card-black-description")}
-      </p>
-      <div class="flex justify-between items-center font-semibold">
-        <p class="text-2xl">{t("services.link-card-black-link")}</p>
-        <a
-          href="#"
-          class="size-16 hover:bg-txt-400 hover:text-txt-600 duration-300 flex items-center justify-center text-lg rounded-full bg-txt-600"
-        >
-          <ArrowDown size={24} />
-        </a>
-      </div>
-    </div>
-    <div
-      class="hidden md:flex rounded-4xl bg-primary p-8 flex-col justify-between text-txt-100 animation-appear animate-delay-[400ms]"
-    >
-      <p class="text-lg leading-[170%]">
-        {t("services.link-card-primary-description")}
-      </p>
-      <div class="font-semibold flex justify-between items-center">
-        <p class="text-2xl">{t("services.link-card-primary-link")}</p>
-        <div>
-          <a
-            href="#"
-            class="size-16 flex items-center duration-300 hover:bg-txt-100 hover:text-txt-400 justify-center text-lg rounded-full bg-white"
-          >
-            <ArrowDown size={24} />
-          </a>
-        </div>
-      </div>
-    </div>
   </section>
 </div>

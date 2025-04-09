@@ -30,10 +30,10 @@ const t = useTranslations(lang);
     </p>
     <div class="flex items-start gap-6 mt-14 justify-between">
       <Image
-        class="rounded-2.5xl hidden md:block object-cover object-center max-w-lg"
+        class="rounded-2.5xl hidden md:block object-cover object-center max-w-lg h-auto max-h-[590px]"
         src={faqImage}
         width={455}
-        height={663}
+        height={590}
         alt=""
       />
       <FAQ client:load lang={lang} />

@@ -18,7 +18,7 @@ export const ui: UI = {
     "nav.contact": "Contacto",
     // Hero section
     "hero.marked-title": "A ponte",
-    "hero.title": "Entre",
+    "hero.title": "Entre o presente",
     "hero.small-title": "e o futuro do mercado",
     "hero.subtitle":
       "A Bold Labs é um laboratório de inovação criativa, agência e consultoria especializada em capacitar marcas africanas a destacarem-se.",
@@ -88,7 +88,7 @@ export const ui: UI = {
     "contact.title-text-3": "Criar",
     "contact.subtitle":
       "Encontrar a voz certa para a sua marca pode ser um desafio. A Bold Labs transforma esse processo, conectando sua empresa a estratégias criativas e inovadoras que fazem a diferença.",
-    "contact.button": "Contrate-nos",
+    "contact.button": "Contacte-nos",
     // Footer
     "footer.text": "Inovar. Inspirar. Criar",
     "footer.copy": "Copyright © {} Bold Labs. Todos os direitos reservados.",
@@ -103,7 +103,7 @@ export const ui: UI = {
     "nav.contact": "Contact",
     // Hero section
     "hero.marked-title": "The bridge",
-    "hero.title": "Between",
+    "hero.title": "Between the present",
     "hero.small-title": "and the future of the market",
     "hero.subtitle":
       "Bold Labs is a creative innovation lab, agency, and consultancy specializing in empowering African brands to stand out.",
@@ -173,7 +173,7 @@ export const ui: UI = {
     "contact.title-text-3": "Create",
     "contact.subtitle":
       "Finding the right voice for your brand can be a challenge. Bold Labs transforms this process, connecting your business with creative and innovative strategies that make a difference.",
-    "contact.button": "Hire us",
+    "contact.button": "Contact Us",
     // Footer
     "footer.text": "Innovate. Inspire. Create",
     "footer.copy": "Copyright © {} Bold Labs. All rights reserved.",
