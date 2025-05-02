@@ -9,6 +9,12 @@ type UI = Record<keyof typeof languages, Record<string, string>>;
 
 export const ui: UI = {
   pt: {
+    // SEO
+    "seo.title": "Bold Labs | Branding e Comunicação Estratégica em Angola",
+    "seo.description":
+      "Consultora criativa em Angola especializada em branding, posicionamento de marcas, gestão de crises, estudos de mercado e campanhas culturais.",
+    "seo.keywords":
+      "branding Angola, posicionamento de marcas Angola, consultoria de comunicação Angola, gestão de crises empresariais, estudos de mercado Angola, campanhas culturais Angola, agência de branding Angola, formação em comunicação corporativa, produção de conteúdo para marcas, consultoria estratégica para empresas angolanas, planeamento de campanhas culturais, análise de mercado africano",
     // Navbar
     "nav.home": "Início",
     "nav.services": "Serviços",
@@ -94,6 +100,12 @@ export const ui: UI = {
     "footer.copy": "Copyright © {} Bold Labs. Todos os direitos reservados.",
   },
   en: {
+    // SEO
+    "seo.title": "Bold Labs | Branding and Strategic Communication in Angola",
+    "seo.description":
+      "Creative consultancy in Angola specializing in branding, brand positioning, crisis management, market research, and cultural campaigns.",
+    "seo.keywords":
+      "branding Angola, brand positioning Angola, communication consultancy Angola, corporate crisis management, market research Angola, cultural campaigns Angola, branding agency Angola, corporate communication training, content production for brands, strategic consulting for Angolan companies, cultural campaign planning, African market analysis",
     // Navbar
     "nav.home": "Home",
     "nav.services": "Services",
