@@ -42,28 +42,21 @@ const t = useTranslations(lang);
     <title>{t("seo.title")}</title>
     {
       Object.keys(languages).map((code) => (
-        <link
-          rel="alternate"
-          hreflang={code}
-          href={`${Astro.url.origin}/${code}`}
-        />
+        <link rel="alternate" hreflang={code} href={`/${code}`} />
       ))
     }
     <!-- Open Graph -->
     <meta property="og:title" content={t("seo.title")} />
     <meta property="og:description" content={t("seo.description")} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={Astro.url} />
+    <!-- <meta property="og:url" content={Astro.url} /> -->
     <meta property="og:locale" content={lang} />
     {
       Object.keys(languages).map((code) => (
         <meta property="og:locale:alternate" content={code} />
       ))
     }
-    <meta
-      property="og:image"
-      content={`${Astro.url.origin}/favicon-32x32.png`}
-    />
+    <meta property="og:image" content={`/favicon-32x32.png`} />
   </head>
   <body class="font-sans font-normal">
     <slot />
