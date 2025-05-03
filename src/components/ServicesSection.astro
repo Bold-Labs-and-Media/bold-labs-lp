@@ -12,11 +12,9 @@ const t = useTranslations(lang);
   >
     <p>{t("services.side-title")}</p>
   </div>
-  <section
-    class="wrapper grid md:grid-cols-2 lg:grid-cols-3 md:grid-rows-[auto,1fr,1fr] md:ml-4 gap-y-5 gap-x-6"
-  >
+  <section class="wrapper md:ml-4 gap-y-5 gap-x-6">
     <h2
-      class="font-monument text-center col-span-full md:text-left lg:text-4.5xl animation-left-title-appear"
+      class="font-monument text-center col-span-full lg:text-4.5xl animation-left-title-appear"
     >
       {t("services.title")}
       <span
@@ -24,6 +22,11 @@ const t = useTranslations(lang);
         ><span>{t("services.marked-title")}</span></span
       >
     </h2>
+    <p
+      class="text-xxs animation-left-title-appear text-center leading-[170%] md:text-left md:text-xl max-w-lg mx-auto"
+    >
+      {t("services.subtitle")}
+    </p>
     <Services lang={lang} client:media="(width >= 48rem /* 768px */)" />
   </section>
 </div>
