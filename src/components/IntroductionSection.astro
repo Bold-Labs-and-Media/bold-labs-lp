@@ -1,0 +1,46 @@
+---
+import introLargeImage from "@/assets/images/intro-large.jpg";
+import introImage from "@/assets/images/intro.jpg";
+import { getLangFromUrl, useTranslations } from "@/lib/utils";
+import { Image } from "astro:assets";
+import StarSVG from "./svg/StarSVG.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="wrapper mt-32 md:mt-24">
+  <div class="flex flex-col gap-4 md:gap-6 items-start md:mb-4">
+    <h2
+      class="font-monument text-center md:text-4.5xl text-txt-100 mb-4 animation-appear"
+    >
+      {t("introduction.title")}
+    </h2>
+    <p
+      class="text-center md:text-xl max-w-2xl mx-auto text-xxs animation-appear"
+    >
+      {t("introduction.subtitle")}
+    </p>
+  </div>
+  <div class="gap-5 md:grid grid-cols-3 md:gap-10 hidden animation-appear">
+    <div class="relative col-span-2 md:mt-10">
+      <div class="absolute -top-6 -left-5">
+        <StarSVG />
+      </div>
+      <Image
+        class="rounded-2.5xl"
+        src={introImage}
+        width={757}
+        height={504}
+        alt=""
+      />
+    </div>
+    <Image
+      class="rounded-2.5xl w-full md:h-[548px]"
+      src={introLargeImage}
+      width={443}
+      height={663}
+      alt=""
+    />
+  </div>
+</section>

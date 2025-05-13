@@ -1,0 +1,32 @@
+---
+import { getLangFromUrl, useTranslations } from "@/lib/utils";
+import Services from "./interactive/Services";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div class="relative mt-10 lg:mt-[121px] md:pl-10">
+  <div
+    id="services"
+    class="absolute hidden md:block -rotate-90 bg-primary px-6 py-4 -translate-x-16 text-white left-0 top-0 font-medium uppercase"
+  >
+    <p>{t("services.side-title")}</p>
+  </div>
+  <section class="wrapper md:ml-4 gap-y-5 gap-x-6">
+    <h2
+      class="font-monument text-center col-span-full lg:text-4.5xl animation-left-title-appear"
+    >
+      {t("services.title")}
+      <span
+        class="-skew-x-[10deg] bg-primary rounded-sm p-1 leading-tight inline-block text-white"
+        ><span>{t("services.marked-title")}</span></span
+      >
+    </h2>
+    <p
+      class="text-xxs animation-left-title-appear text-center leading-[170%] md:text-left md:text-xl max-w-lg mx-auto"
+    >
+      {t("services.subtitle")}
+    </p>
+    <Services lang={lang} client:media="(width >= 48rem /* 768px */)" />
+  </section>
+</div>

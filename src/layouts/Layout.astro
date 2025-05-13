@@ -1,17 +1,65 @@
 ---
+import Footer from "@/components/Footer.astro";
+import { languages } from "@/i18n/ui";
+import { getLangFromUrl, useTranslations } from "@/lib/utils";
+import "@/styles/animation.css";
 import "@/styles/global.css";
+import "@fontsource-variable/archivo";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <!doctype html>
-<html lang="pt-AO">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Bold Labs</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- GTM -->
+    <script
+      type="text/partytown"
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-B5R1BDRCTV"></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-B5R1BDRCTV");
+    </script>
+    <!-- SEO -->
+    <meta name="description" content={t("seo.description")} />
+    <meta name="keywords" content={t("seo.keywords")} />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Bold Labs" />
+    <title>{t("seo.title")}</title>
+    {
+      Object.keys(languages).map((code) => (
+        <link rel="alternate" hreflang={code} href={`/${code}`} />
+      ))
+    }
+    <!-- Open Graph -->
+    <meta property="og:title" content={t("seo.title")} />
+    <meta property="og:description" content={t("seo.description")} />
+    <meta property="og:type" content="website" />
+    <!-- <meta property="og:url" content={Astro.url} /> -->
+    <meta property="og:locale" content={lang} />
+    {
+      Object.keys(languages).map((code) => (
+        <meta property="og:locale:alternate" content={code} />
+      ))
+    }
+    <meta property="og:image" content={`/favicon-32x32.png`} />
   </head>
-  <body>
+  <body class="font-sans font-normal">
     <slot />
+    <Footer />
   </body>
 </html>

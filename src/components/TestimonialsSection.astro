@@ -1,0 +1,48 @@
+---
+import StarSVG2 from "@/components/svg/StarSVG2.astro";
+import { getLangFromUrl, useTranslations } from "@/lib/utils";
+import TestimonialsCarousel from "./interactive/TestimonialsCarousel";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div class="relative mt-14 py-20 md:py-40 bg-txt-100 text-white">
+  <div
+    id="testimonials"
+    class="absolute hidden md:block -rotate-90 bg-txt-600 px-6 py-4 -translate-x-16 text-white left-0 top-36 font-medium uppercase"
+  >
+    <p>{t("testimonials.side-title")}</p>
+  </div>
+  <section class="wrapper relative">
+    <div class="absolute top-20 md:top-36 md:left-16 left-4">
+      <StarSVG2 color="#fff" />
+    </div>
+    <div class="absolute md:top-0 md:right-16 -top-10 right-8">
+      <StarSVG2 color="#fff" />
+    </div>
+    <div class="max-w-xl mx-auto">
+      <h2
+        class="font-monument text-center md:text-4.5xl animation-center-title-appear"
+      >
+        <span
+          class="-skew-x-[10deg] bg-primary rounded-sm p-1 leading-tight inline-block text-white"
+          ><span>{t("testimonials.marked-title")}</span></span
+        >
+        {t("testimonials.title")}
+      </h2>
+      <p
+        class="mt-5 md:mt-6 leading-[170%] text-center text-neutral-400 text-xxs md:text-base"
+      >
+        {t("testimonials.subtitle")}
+      </p>
+    </div>
+  </section>
+  <div class="mt-14 px-8 md:px0">
+    <TestimonialsCarousel client:load testimonials={[]} />
+  </div>
+  <div
+    style="clip-path: polygon(100% 0%, 100% 40%, 0 60%, 0 20%);"
+    class="bg-pattern clip w-full h-[174px] -bottom-[110px] absolute"
+  >
+  </div>
+</div>

@@ -1,0 +1,42 @@
+---
+import faqImage from "@/assets/images/faq.jpg";
+import { getLangFromUrl, useTranslations } from "@/lib/utils";
+import { Image } from "astro:assets";
+import FAQ from "./interactive/FAQ";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div class="relative mt-10 lg:mt-[121px] md:pl-10">
+  <div
+    class="absolute hidden md:block -rotate-90 bg-primary px-6 py-4 -translate-x-16 text-white left-10 top-0 font-medium uppercase"
+  >
+    <p>{t("faq.side-title")}</p>
+  </div>
+  <section class="wrapper md:ml-4 gap-y-5 gap-x-6">
+    <h2
+      class="font-monument text-center md:text-xl lg:text-4.5xl animation-left-title-appear"
+    >
+      {t("faq.title")}
+      <span
+        class="-skew-x-[10deg] bg-primary rounded-sm p-1 leading-tight inline-block text-white"
+        ><span>{t("faq.marked-title")}</span></span
+      >
+    </h2>
+    <p
+      class="text-xxs leading-[170%] text-center md:text-xl mt-5 md:mt-6 max-w-lg mx-auto"
+    >
+      {t("faq.subtitle")}
+    </p>
+    <div class="flex items-start gap-6 mt-14 justify-between">
+      <Image
+        class="rounded-2.5xl hidden md:block object-cover object-center max-w-lg h-auto max-h-[590px]"
+        src={faqImage}
+        width={455}
+        height={590}
+        alt=""
+      />
+      <FAQ client:load lang={lang} />
+    </div>
+  </section>
+</div>

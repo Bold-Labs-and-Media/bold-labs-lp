@@ -1,0 +1,24 @@
+---
+import ContactSection from "@/components/ContactSection.astro";
+import FAQSection from "@/components/FAQSection.astro";
+import Hero from "@/components/Hero.astro";
+import IntroductionSection from "@/components/IntroductionSection.astro";
+import Navbar from "@/components/Navbar.astro";
+import ServicesSection from "@/components/ServicesSection.astro";
+import WhyChooseUsSection from "@/components/WhyChooseUsSection.astro";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout>
+  <div class="pt-7 md:pt-12 relative background-grid-pattern bg-txt-100">
+    <Navbar />
+    <Hero />
+  </div>
+  <IntroductionSection />
+  <ServicesSection />
+  <WhyChooseUsSection />
+  <!-- <PortfolioSection /> -->
+  <!-- <TestimonialsSection /> -->
+  <FAQSection />
+  <ContactSection />
+</Layout>
