@@ -4,6 +4,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { defaultLang } from "@/i18n/ui";
 import { ChevronDown } from "lucide-react";
 
 type Props = {
@@ -24,7 +25,10 @@ export default function LanguageDropdownMenu({ label, languages }: Props) {
       <DropdownMenuContent className="bg-txt-100 border-txt-200 px-4 text-white">
         {languages.map(({ code, label }) => (
           <DropdownMenuItem key={code}>
-            <a className="hover:text-primary duration-300" href={`/${code}`}>
+            <a
+              className="hover:text-primary duration-300"
+              href={code == defaultLang ? "/" : `/${code}`}
+            >
               {label}
             </a>
           </DropdownMenuItem>
