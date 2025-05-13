@@ -14,7 +14,6 @@ export default function Services({ lang }: Props) {
   const servicesIdFirstHalf = servicesIds.slice(0, 3);
   const servicesIdSecondHalf = servicesIds.slice(3);
   const [selectedService, setSelectedService] = useState(servicesIds[0]);
-  console.log(selectedService);
 
   return (
     <div className="mt-10 grid grid-cols-1 gap-x-4 md:grid-cols-3">

@@ -6,7 +6,6 @@ export default function MobileNavMenu({ children }: PropsWithChildren) {
 
   useEffect(() => {
     const mobileMenuLinks = document.querySelectorAll("#mobile-menu li");
-    console.log(mobileMenuLinks);
 
     const handleMobileMenuLinkClick = () => {
       closeMenuOnClick();
