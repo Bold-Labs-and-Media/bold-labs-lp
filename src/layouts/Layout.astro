@@ -6,6 +6,8 @@ import "@/styles/animation.css";
 import "@/styles/global.css";
 import "@fontsource-variable/archivo";
 
+const { origin } = Astro.url;
+
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
@@ -42,7 +44,7 @@ const t = useTranslations(lang);
     <title>{t("seo.title")}</title>
     {
       Object.keys(languages).map((code) => (
-        <link rel="alternate" hreflang={code} href={`/${code}`} />
+        <link rel="alternate" hreflang={code} href={`${origin}/${code}`} />
       ))
     }
     <!-- Open Graph -->

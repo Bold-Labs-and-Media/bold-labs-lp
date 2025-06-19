@@ -30,8 +30,10 @@ export default function Services({ lang }: Props) {
         {services.map(({ id, imgUrl }) => (
           <img
             key={id}
+            width={382}
             height={580}
-            src={imgUrl}
+            src={imgUrl.src}
+            loading={id === selectedService ? "eager" : "lazy"}
             alt=""
             style={
               id !== selectedService
