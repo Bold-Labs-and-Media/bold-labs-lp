@@ -105,6 +105,6 @@ html {
 }
 
 .bg-pattern {
-  background: var(--color-primary) url("/images/pattern.png") repeat;
+  background: var(--color-primary) url("/images/pattern.webp") repeat;
   background-size: 700px;
 }

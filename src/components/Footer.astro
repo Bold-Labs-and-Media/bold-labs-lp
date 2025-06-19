@@ -52,7 +52,10 @@ const t = useTranslations(lang);
     >
       <p class="text-xs md:text-lg">{t("footer.copy", String(year))}</p>
       <ul class="flex justify-center gap-4 items-center">
-        <SocialMediaLink href="https://www.instagram.com/boldlabsao">
+        <SocialMediaLink
+          title="Instagram"
+          href="https://www.instagram.com/boldlabsao"
+        >
           <InstagramIcon slot="icon" />
         </SocialMediaLink>
         <!-- <SocialMediaLink href="https://www.facebook.com/">
@@ -61,7 +64,10 @@ const t = useTranslations(lang);
         <SocialMediaLink href="https://x.com/">
           <XIcon slot="icon" />
         </SocialMediaLink> -->
-        <SocialMediaLink href="https://www.linkedin.com/company/bold-labsao/">
+        <SocialMediaLink
+          title="Linkedin"
+          href="https://www.linkedin.com/company/bold-labsao/"
+        >
           <LinkedInIcon slot="icon" />
         </SocialMediaLink>
       </ul>
